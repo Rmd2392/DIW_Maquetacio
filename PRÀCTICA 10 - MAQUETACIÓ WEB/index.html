@@ -4,30 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/PNG" href="img/favicon.png">
+    <!-- Uso el formato PNG porque es el más óptimo, ya que no tiene pérdida de calidad y permite transparencias-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Bar Oliva Cafeteria</title>
 </head>
-<!-- comits : menu acabado, sobre nosotros,-->
 <body>
+    <!-- Menú principal - Fijo en la parte superior -->
     <nav class="menu-principal">
-        <a href="#" >Nosotros</a>
-        <a href="#" >Carta</a>
-        <a href="#" >Galeria</a>
+        <a href="#sobre-nosotros">Nosotros</a>
+        <a href="#carta">Carta</a>
+        <a href="#galeria">Galeria</a>
     </nav>
+
+    <!-- Cabecera - Imagen de fondo con texto superpuesto -->
     <header class="img-header">
-        <img src="/img/fondo.jpg" alt="">
-        <div class="topleft">Top Left</div>
+        <img src="/img/fondo.jpg" alt="Imagen de fondo">
+        <div class="header-text">
+            Bar <strong>Oliva</strong> Cafeteria<br> <!-- Uso de strong para hacer "Oliva" con bold -->
+            El sabor de la tierra extremeña
+        </div>
     </header>
-    <section class="section-nosotros">
-        <h2>Sobre nosotros</h2>
-        <div></div>
-        <div></div>
+
+    <section class="section-main">
+        <!-- Sección Sobre Nosotros con Flexbox -->
+        <article id="sobre-nosotros" class="article-generic sobre-nosotros">
+            <h2 class="titol-sobre-nosotros">Sobre nosotros</h2>
+            <div class="sobre-nosotros-container">
+                
+                <div class="sobre-nosotros-bloque">
+                    <div class="img-nosotros">
+                        <img src="img/cocineros.jpg" alt="cocineros">
+                    </div>
+                    <div class="text-nosotros">
+                            <p> Hace más de 30 años, en el barrio de Sant Andreu de Barcelona, nació Bar Oliva Cafetería, un rincón extremeño fundado en 1992 por Manuel,
+                                un hombre con raíces en la dehesa extremeña y un amor inquebrantable por la gastronomía tradicional. Su sueño era compartir los sabores de
+                                su tierra con los barceloneses y aquellos que anhelaban la esencia de Extremadura lejos de casa. Hoy, tres décadas después, su legado sigue
+                                vivo gracias a sus cuatro hijos, Antonio, José, Dani e Isa, quienes han mantenido la esencia familiar con esfuerzo y dedicación. Con dos
+                                generaciones al frente y una tercera en camino, el Bar Oliva sigue siendo un lugar donde cada plato es un homenaje a las raíces y cada cliente,
+                                parte de nuestra historia.</p>
+                    </div>
+                </div>
+    
+                <div class="sobre-nosotros-bloque">
+                    <div class="img-nosotros">
+                        <img src="img/fondo2.jpg" alt="fondo2">
+                    </div>
+                    <div class="text-nosotros">
+                        <p>
+                            En Bar Oliva no solo servimos comida, contamos historias a través de cada plato. Desde nuestro plato estrella las migas extremeñas hasta 
+                            la torta del casar fundida sobre pan recién horneado, cada bocado transporta a nuestros comensales a los campos y dehesas de Extremadura. 
+                            Nos abastecemos de ingredientes frescos y auténticos, traídos directamente de productores extremeños, porque creemos que la calidad 
+                            y el respeto por la tradición son la clave de nuestra cocina. Nuestra filosofía es sencilla: ofrecer un pedacito de Extremadura en cada plato, 
+                            manteniendo la esencia de nuestras raíces con un toque contemporáneo. Te invitamos a descubrir el sabor de nuestra historia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
     </section>
-    <section>
-        <h2>Carta</h2>
+    
+
+        <!-- Sección Carta con Grid -->
+<article id="carta" class="article-generic carta">
+    <h2>Carta</h2>
+    <div class="carta-container">
+        <!-- Menú general -->
+        <div class="menu-title">Menú</div>
+
+        <!-- Menú 1 -->
+        <div class="menu-category">Menú 1</div>
+        <div class="menu-content">
+            <h3>Auténtico sabor extremeño</h3>
+            <p>Disfruta de los auténticos sabores de Extremadura con nuestro menú donde combinamos recetas tradicionales llenas de historia y carácter.
+                Las Migas Extremeñas, preparadas con pan, chorizo, panceta y ajo, son un clásico de la cocina rural, un plato reconfortante que evoca la esencia
+                de la dehesa. Como plato principal, la Presa Ibérica a la Brasa, tierna y jugosa, se acompaña de pimientos asados y patatas, resaltando el inconfundible
+                sabor del cerdo ibérico criado en libertad. Un menú perfecto para los amantes de la cocina auténtica y sabrosa.</p>
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="img/migasextremeñas.jpg" alt="Migas extremeñas">
+                    <div class="overlay">Migas extremeñas</div>
+                </div>
+                <div class="image-box">
+                    <img src="img/presaibericabrasa.jpg" alt="Presa ibérica a la brasa">
+                    <div class="overlay">Presa ibérica a la brasa</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú 2 -->
+        <div class="menu-category">Menú 2</div>
+        <div class="menu-content">
+            <h3>Sabores del Atlántico y la Tierra</h3>
+            <p>Comenzamos con un delicioso Bacalao Dorado, un plato inspirado en la cocina luso-extremeña, donde el bacalao desmigado se mezcla con huevos, patatas paja y
+                perejil, creando una combinación de texturas y sabores irresistible. Como plato fuerte, el Solomillo al Ajo Tostado, una pieza de carne tierna bañada en una
+                suculenta salsa de ajo dorado que realza su jugosidad y aroma, servido con guarnición de patatas. Una propuesta llena de matices para disfrutar de una experiencia
+                gastronómica única.</p>
+            <div class="image-container">
+                <div class="image-box">
+                    <img src="img/bacalaodorado.jpg" alt="Bacalao dorado">
+                    <div class="overlay">Bacalao dorado</div>
+                </div>
+                <div class="image-box">
+                    <img src="img/solomilloajotostado.jpg" alt="Solomillo al ajo tostado">
+                    <div class="overlay">Solomillo al ajo tostado</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+         <!-- Galería de fotos con Flexbox -->
+        <article id="galeria" class="article-generic galeria">
+            <h2>Galeria</h2>
+            <div class="galeria-container">
+                <div class="img-galeria"><img src="/img/puentereal.jpg" alt="Puente real"></div>
+                <div class="img-galeria"><img src="/img/puertapalma.jpg" alt="Puerta palma"></div>
+                <div class="img-galeria"><img src="/img/alcazaba3jpg.jpg" alt="La alcazaba"></div>
+                <div class="img-galeria"><img src="/img/puentepalmas.jpg" alt="Puente de palmas"></div>
+                <div class="img-galeria"><img src="/img/guadiana.jpg" alt="Guadiana"></div>
+                <div class="img-galeria"><img src="/img/badajozjpg.jpg" alt="Badajoz"></div>
+                <div class="img-galeria"><img src="/img/plazaalta.jpg" alt="Plaza alta"></div>
+                <div class="img-galeria"><img src="/img/alcazaba.jpg" alt="La alcazaba"></div>
+            </div>
+        </article>
+
+        <!-- Formulario de reserva con Grid -->
+        <article id="reserva" class="article-generic reserva">
+            <h2>Reserva</h2>
+            
+            <div class="Reserva-container"> <!-- Aquí se aplica grid-->
+
+                <form class="reserva-form">
+                    <div class="form-group nombre">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+        
+                    <div class="form-group numero">
+                        <label for="personas">Número de personas</label>
+                        <input type="number" id="personas" name="personas" min="1" required>
+                    </div>
+        
+                    <div class="form-group fecha">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+        
+                    <div class="form-group hora">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+        
+                    <div class="form-group comments">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea id="comentarios" name="comentarios" placeholder="Añadir comentarios"></textarea>
+                    </div>
+        
+                    <div class="button-container">
+                        <button type="submit">Reservar</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+        
     </section>
-    <footer class="footer-main">
-        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique labore ipsam nemo assumenda esse nostrum, aut laboriosam minima, repudiandae harum cum odio. Doloremque minima vel temporibus optio eveniet libero. .</p></div>
-        <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse iure possimus enim, cum libero molestiae. Ab ipsam voluptatum provident non. Ullam aut corrupti consequatur repellendus, at quibusdam quis impedit nesciunt? .</p></div>
-    </footer>
+
+
+    <!-- Footer (con iconos de Google) -->
+    <div class="footer-container">
+        <footer class="footer-main">
+            <div class="footer-left">
+                <i class="material-icons">phone</i> 936 42 31 83
+                <i class="material-icons">email</i> info@baroliva.com
+            </div>
+            <div class="footer-right">
+                <img src="img/logo.png" alt="Logo del restaurante">
+            </div>
+        </footer>    
+    </div>
+
+    <!-- Botón de reserva fijo -->
+     <form action="#reserva">
+        <button class="fixed-bottom-rigth">Reservar</button>
+    </form>
 </body>
 </html>
