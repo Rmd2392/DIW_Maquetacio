@@ -1,0 +1,418 @@
+/************************ ESTILOS GENERALES ***************************/
+
+html{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: auto;
+    overflow-x: hidden; /*Evita el scroll horizontal*/
+}
+
+/*Evita espacio en blanco entre secciones*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Rem calcula el valor proporcional del main (html) */
+
+h1 {
+    font-size: 2.5rem;     /* 16*2.5= 40px */
+}
+
+h2 {
+    font-size: 2rem;       /* 16*2= 32px */
+    color: black;
+}
+
+h3 {
+    font-size: 1.5rem;     /* 16*1.5= 24px */
+}
+
+p {
+    font-size: 1rem;       /* 16*1= 16px */
+    text-align: justify;
+}
+
+.article-generic h2 {
+    text-align: left; /* Alinea el título a la izquierda */
+    margin-left: 10%;  /* Añade margen izquierdo para darle espacio */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+/* Colores de fondo de las secciones */
+.sobre-nosotros {
+    background-color: #F5F5DC;
+}
+.carta {
+    background-color: #FFF3E6;
+}
+.galeria {
+    background-color: #EAEAEA
+}
+
+
+/************************ MENU PRINCIPAL ***************************/
+.menu-principal {
+    background-color: rgb(85, 107, 47);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1;  /*Si se encuentras elementos que se sobrepongan se usara 1000*/
+}
+
+.menu-principal a{
+    text-decoration: none;
+    color: rgb(245, 245, 220);
+    padding: 10px 15px; /* Espaciado para hacer la caja */
+    border: 2px solid black; /* Borde negro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.menu-principal a:hover {
+    text-decoration: underline;
+    background-color: rgb(194, 166, 97);
+    color: black;
+    border-color: rgb(245, 245, 220);
+    transform: scale(1.05); /* Efecto sutil de agrandamiento */
+}
+
+
+/************************ CABECERA ***************************/
+
+.img-header {
+    position: relative;
+    width: 100%;
+    height: 375px;
+    overflow: hidden;
+}
+
+.img-header img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-weight: bold;
+    object-fit: cover; /* Hace que la imagen cubra el espacio sin distorsionarse */
+    object-position: center; /* Centra la imagen */
+}
+.header-text {
+    position: absolute;
+    font-family: Georgia, serif;
+    text-align: center;
+    top: 35%;
+    left: 8px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;       /* Em coge la referencia de el etiqueta padre (en este caso .sobre-nosotros)*/
+    font-weight: bold;
+    color: rgb(245, 245, 220);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 12px;
+    max-width: 40%; /* Evitamos que el fondo negro sea demasiado ancho */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .header-text strong {
+    font-weight: bold;
+    color: rgb(255, 255, 200); /*"Oliva" quedará resaltado de blanco mas claro*/
+}
+
+/************************ SOBRE NOSOTROS ***************************/
+
+.sobre-nosotros-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: auto;
+    max-width: 80%;
+}
+
+/* Cada bloque con imagen y texto */
+.sobre-nosotros-bloque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+/* Alterna la dirección en los bloques pares */
+.sobre-nosotros-bloque:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.img-nosotros {
+    width: 40%;
+    max-width: 450px;  
+}
+
+.img-nosotros img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text-nosotros {
+    width: 55%;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/************************ CARTA ***************************/
+
+/* Contenedor principal en grid */
+.carta-container {
+    display: grid;
+    grid-template-columns: 150px 1fr; /* Primera columna pequeña, segunda flexible */
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Título "Menú" centrado */
+.menu-title {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+/* Estilo de cada categoría de menú (Menú 1, Menú 2) */
+.menu-category {
+    writing-mode: horizontal-tb;
+    text-align: center;
+    font-weight: bold;
+    background-color: #eee;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid #000;
+    width: auto;
+}
+
+/* Contenido del menú */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
+    gap: 10px;
+}
+
+/* Caja de cada imagen */
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-box img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Overlay para el texto */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/************************ GALERIA ***************************/
+
+.galeria-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 10px; /* Espacio entre las imagenes */
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.img-galeria{
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px); /* Límite máximo por imagen */
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-galeria:hover{
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter:brightness(60%);
+    border: 2px solid black; /*Añade un borde al pasar el cursor*/
+}
+
+.img-galeria img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;  /*Recorta la imagen si es necesario para ajustarla */
+    border-radius: 5px;
+    display: block;
+}
+
+.img-galeria:nth-child(1),
+.img-galeria:nth-child(4),
+.img-galeria:nth-child(5),
+.img-galeria:nth-child(8){
+    filter:brightness(40%);
+}
+
+
+/************************ FORMULARIO ***************************/
+.reserva-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+/* Ajuste para inputs y textarea */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.reserva-form input,
+.reserva-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Hace que Comentarios ocupe toda la fila */
+.comments {
+    grid-column: span 2;
+}
+
+#comentarios {
+    width: 100%;
+    min-height: 120px; /* Ajusta la altura mínima */
+}
+
+/* Alinea el botón correctamente a la derecha */
+.form-group.comments {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: span 2; 
+    margin-top: 10px;
+}
+
+
+/* Asegura que el botón no se expanda innecesariamente */
+.reserva-form button {
+    background-color: rgb(85, 107, 47);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #445c2e;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: auto; /*evita que el botón sea del ancho total */
+}
+
+.reserva-form button:hover {
+    background-color: rgb(97, 122, 54);
+    transform: scale(1.04);
+}
+
+
+/************************ FOOTER ***************************/
+
+.footer-main {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre iconos y texto */
+}
+
+.footer-left i {
+    font-size: 24px;
+    margin-right: 5px;
+    color: white; /* Asegura que los iconos sean blancos */
+}
+
+.footer-right img {
+    width: auto; /* Ajusta el tamaño del logo */
+    height: 50px;
+}
+
+/************************ BOTON RESERVA ***************************/
+
+/* Elemento fijo en la esquina inferior derecha (Reservar) */
+.fixed-bottom-rigth {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(85, 107, 47);
+    color: rgb(245, 245, 220);
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: 2px solid rgb(0, 24, 13);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fixed-bottom-rigth:hover {
+    background-color: rgb(97, 122, 54);
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
+}
