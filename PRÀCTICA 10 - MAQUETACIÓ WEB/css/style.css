@@ -416,3 +416,81 @@ p {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
 }
+
+
+/**************************************/
+/****** MEDIA QUERIES RESPONSIVE ******/
+/**************************************/
+
+/*Estilos para móviles (hasta 576px) */
+@media (max-width: 576px) {
+
+  /* Ajuste del menú */
+  .menu-principal {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Ajuste sobre nosotros */
+    .sobre-nosotros-bloque {
+      flex-direction: column !important; /* Fuerza columna en todos */
+      align-items: center;
+      text-align: center;
+    }
+  
+    .img-nosotros,
+    .text-nosotros {
+      width: 100%;
+    }
+  
+    .text-nosotros {
+      padding: 10px;
+    }
+     
+  /* Ajuste carta */
+  .carta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .menu-category {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-box {
+    width: 100%;
+  }
+
+  .menu-title {
+    display: none;
+  }
+
+/* Ajuste Galería en una sola columna */
+    .img-galeria {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    
+      .galeria-container {
+        padding: 0 10px; /* un poco de espacio lateral si quieres */
+      }
+}
+
+
+
