@@ -422,7 +422,7 @@ p {
 /****** MEDIA QUERIES RESPONSIVE ******/
 /**************************************/
 
-/*Estilos para móviles (hasta 576px) */
+/*** Estilos para móviles (hasta 576px) ***/
 @media (max-width: 576px) {
 
   /* Ajuste del menú */
@@ -490,6 +490,81 @@ p {
       .galeria-container {
         padding: 0 10px; /* un poco de espacio lateral si quieres */
       }
+}
+
+/* Ajuste Formulario */
+
+.reserva-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem; /* 20px */
+    padding: 1rem;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .comments {
+    grid-column: 1 / -1;
+  }
+
+  .button-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .reserva-form button {
+    width: 100%;
+  }
+
+
+  /* Ajuste footer */
+
+  .footer-main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-right {
+    display: none; /* Oculta el logo */
+  }
+
+
+
+/*Ajuste para boton fijo*/
+
+  .fixed-bottom-rigth {
+    display: none; /* Oculta el botón fijo */
+  }
+
+
+
+
+
+/*** Estilos para tablets (hasta 768px) ***/
+
+
+@media (max-width: 768px) {
+
+/* Ajuste del menú */
+
+
+
+
 }
 
 
