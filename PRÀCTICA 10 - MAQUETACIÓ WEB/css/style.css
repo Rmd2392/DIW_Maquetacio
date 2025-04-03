@@ -409,6 +409,7 @@ p {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 .fixed-bottom-rigth:hover {
@@ -416,3 +417,253 @@ p {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Efecto de sombra */
 }
+
+
+/**************************************/
+/****** MEDIA QUERIES RESPONSIVE ******/
+/**************************************/
+
+
+/*** Estilos para tablets (hasta 768px) ***/
+@media (max-width: 768px) {
+  
+    /* Ajuste menú: centramos las opciones */
+    .menu-principal {
+      justify-content: center;
+    }
+  
+    /* Ajuste texto del header: centrado en la imagen */
+    .header-text {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  
+  /* Ajuste sección sobre nosotros */
+
+  .sobre-nosotros-container {
+    gap: 2rem; /* 32px de separación entre bloques */
+  }
+
+  /* Primer bloque: imagen arriba, texto abajo, mismo ancho */
+  .sobre-nosotros-bloque:first-child {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-nosotros-bloque:first-child .img-nosotros,
+  .sobre-nosotros-bloque:first-child .text-nosotros {
+    width: 90%;
+    max-width: 600px;
+    padding: 0.625rem; /* 10px */
+  }
+
+  /* Segundo bloque: imagen izquierda, texto derecha */
+  .sobre-nosotros-bloque:nth-child(2) {
+    flex-direction: row;
+    align-items: stretch; /* Las dos columnas se ajustan al mismo alto */
+    justify-content: center;
+    gap: 1.5rem; /* 24px */
+  }
+
+  .sobre-nosotros-bloque:nth-child(2) .img-nosotros {
+    width: 40%;
+  }
+
+  .sobre-nosotros-bloque:nth-child(2) .img-nosotros img {
+    height: 100%;
+    object-fit: cover;
+    
+  }
+
+  .sobre-nosotros-bloque:nth-child(2) .text-nosotros {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+  }
+  
+    /* Ajuste carta */
+    .carta-container {
+      grid-template-columns: 100px 1fr;
+      padding: 0 1rem;
+      column-gap: 1rem;
+    }
+  
+    .menu-title {
+      font-size: 1.5rem;
+      padding: 0.8rem;
+    }
+  
+    .menu-category {
+      font-size: 1.1rem;
+      padding: 0.6rem;
+    }
+  
+    .menu-content {
+      gap: 0.8rem;
+    }
+  
+    .image-container {
+      grid-template-columns: 1fr; /* Solo una imagen por fila */
+    }
+  
+    .overlay {
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+    }
+  
+    /* Ajuste galería (en dos columnas) */
+    .galeria-container {
+      justify-content: center;
+      gap: 20px;
+      padding: 0 10px;
+    }
+  
+    .img-galeria {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      height: 200px;
+      overflow: hidden;
+    }
+  
+    .img-galeria img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    /* Ajuste formulario (más compacto) */
+    .reserva-form {
+      gap: 20px;
+      padding: 1rem;
+    }
+  
+    .comments,
+    .button-container {
+      grid-column: 1 / -1;
+    }
+  
+    .button-container {
+      justify-content: center;
+    }
+  
+    .reserva-form button {
+      width: 100%;
+    }
+    /* Ajuste footer */
+   
+    .footer-main {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  
+    .footer-left {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-right {
+      display: none;
+    }
+
+/*** Estilos para móviles (hasta 576px) ***/
+@media (max-width: 576px) {
+
+    /* Ajuste menú principal */
+    .menu-principal {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Ajuste cabecera */
+    .header-text {
+    display: none; /* Oculta el texto en la cabecera */
+    }
+  
+    /* Ajuste sección sobre nosotros */
+    .sobre-nosotros-bloque {
+      flex-direction: column !important;
+      gap: 1.5rem;
+    }
+  
+    .img-nosotros {
+      width: 100% !important;
+      max-width: 500px;
+      text-align: center;
+    }
+  
+    .text-nosotros {
+      width: 100% !important;
+      padding: 0 1rem;
+    }
+  
+ /* Ajuste carta */
+ .carta-container {
+  display: grid; /* mantenemos grid */
+  grid-template-columns: 1fr; /* solo una columna en móviles */
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.menu-category {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.menu-content {
+  gap: 0.8rem;
+}
+
+.image-container {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.image-box {
+  width: 100%;
+}
+
+.menu-title {
+  display: none; /* oculto en móviles según wireframe */
+}
+  
+    /* Ajustes Galeria */
+    .img-galeria {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  
+    .galeria-container {
+      padding: 0 10px;
+    }
+  
+    /* Ajustes Formulario */
+
+    .comments,
+    .button-container {
+      grid-column: 1 / -1;
+    }
+  
+    .button-container {
+      justify-content: center;
+    }
+  
+    .reserva-form button {
+      width: 100%;
+    }
+  
+  }
+  
+}
+
+
+
+
