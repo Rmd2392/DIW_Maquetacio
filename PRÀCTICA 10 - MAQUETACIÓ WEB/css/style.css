@@ -665,5 +665,96 @@ p {
 }
 
 
+/* ============================= */
+/*         MULTIMEDIA           */
+/* ============================= */
+
+
+/*Ejercicio 3*/
+.video {
+    background-color: #FFF3E6;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.container-video video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+}
+
+
+/*Ejercicio 1*/
+/* TRANSICIÓN GALERÍA */
+.img-galeria {
+    overflow: hidden; /* Evita que la imagen se salga al hacer transform */
+}
+
+.img-galeria img {
+    transition: transform 0.4s ease, filter 0.4s ease; /* activa transición */
+}
+
+.img-galeria:hover img {
+    transform: scale(1.15) rotate(-3.3deg); /* Aumenta y rota ligeramente */
+    filter: grayscale(80%);              /* Aplica escala de grises */
+}
+
+/* TRANSICIÓN LIBRE */
+/* Esta transición utiliza: background-color, transform y box-shadow */
+.fixed-bottom-rigth {
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-bottom-rigth:hover {
+    background-color: #b6d265;
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Ejercicio 4*/
+
+/* Asegura que el contenedor del vídeo permita posicionamiento absoluto */
+.container-video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Controles personalizados arriba a la derecha, fondo oscuro translúcido */
+.video-controls-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* se expande todo el ancho del video */
+    background: rgba(0, 0, 0, 0.4); /* Fondo oscuro translucido */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los iconos a la derecha */;;
+    gap: 10px;
+}
+
+/* Iconos con transición y efecto de sombra */
+.video-controls-overlay span {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.video-controls-overlay span:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Efecto de sombra al pasar el ratón */
+}
+
+
+/* Oculta controles nativos del vídeo */
+video::-webkit-media-controls {
+    display: none !important;
+}
 
 

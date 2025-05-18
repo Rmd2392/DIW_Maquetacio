@@ -15,6 +15,8 @@
         <a href="#sobre-nosotros">Nosotros</a>
         <a href="#carta">Carta</a>
         <a href="#galeria">Galeria</a>
+        <a href="#video">Vídeo</a>
+
     </nav>
 
     <!-- Cabecera - Imagen de fondo con texto superpuesto -->
@@ -129,6 +131,27 @@
             </div>
         </article>
 
+    <!-- Sección Video -->
+<article id="video" class="article-generic video">
+    <h2>Vídeo del restaurante (emplatado)</h2>
+
+    <div class="container-video">
+        <video id="video-HD" muted playsinline>
+            <source src="video/video-HD.mp4" type="video/mp4" />
+            <source src="video/video-HD.webm" type="video/webm" />
+            <!-- Formato alternativo para compatibilidad con navegadores que no soportan MP4 -->
+            Tu navegador no soporta el vídeo.
+        </video>
+        <!-- Controles personalizados superpuestos al vídeo (arriba a la derecha) -->
+        <div class="video-controls-overlay">
+            <span class="material-icons" onclick="playVideo()">play_circle</span>
+            <span class="material-icons" onclick="pauseVideo()">pause_circle</span>
+            <span class="material-icons" onclick="unmuteVideo()">volume_up</span>
+            <span class="material-icons" onclick="muteVideo()">volume_off</span>
+        </div>
+    </div>
+</article>
+
         <!-- Formulario de reserva con Grid -->
         <article id="reserva" class="article-generic reserva">
             <h2>Reserva</h2>
@@ -167,7 +190,7 @@
                 </form>
             </div>
         </article>
-        
+
     </section>
 
 
@@ -188,5 +211,25 @@
      <form action="#reserva">
         <button class="fixed-bottom-rigth">Reservar</button>
     </form>
+
+    <script>
+    const video = document.getElementById('video-HD');
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+
+    function muteVideo() {
+        video.muted = true;
+    }
+
+    function unmuteVideo() {
+        video.muted = false;
+    }
+</script>
 </body>
 </html>
