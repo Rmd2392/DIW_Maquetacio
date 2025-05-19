@@ -1,6 +1,13 @@
-# Proyecto Web - Bar Oliva Cafetería
+# DIW_Maquetacio – Proyecto Web Responsive y Multimedia
 
-Este proyecto web forma parte del módulo **DIW (Diseño de Interfaces Web)** del Grado Superior en Desarrollo de Aplicaciones Web (DAW) del **Institut TIC de Barcelona**. A lo largo de las prácticas 10, 11 y 12 se ha desarrollado un sitio web estructurado, responsive y multimedia.
+Este repositorio reúne el desarrollo completo de un **sitio web para el bar-cafetería  "Bar Oliva"**, creado como parte de las prácticas 10, 11 y 12 del módulo **DIW (Diseño de Interfaces Web)** del CFGS de **Desarrollo de Aplicaciones Web (DAW)** en el **Institut TIC de Barcelona**.
+
+El proyecto está dividido en tres fases:
+- **Práctica 10**: Maquetación del sitio con HTML5 semántico y CSS3 utilizando Flexbox y Grid.
+- **Práctica 11**: Adaptación del diseño para tablets y móviles mediante media queries.
+- **Práctica 12**: Incorporación de transiciones, animaciones CSS y contenido multimedia interactivo.
+
+Todo el código está comentado, estructurado en ramas según la práctica, y pensado para ofrecer una experiencia visual fluida y responsive en todos los dispositivos.
 
 ---
 
@@ -92,7 +99,7 @@ Este proyecto web forma parte del módulo **DIW (Diseño de Interfaces Web)** de
 
 ---
 
-## ✅ Observaciones finales
+##  Observaciones finales
 
 - Todo el código CSS está unificado en **`style.css`** y **organizado por secciones y ejercicios**.
 - Se han seguido buenas prácticas de codificación, comentarios explicativos y semántica.
