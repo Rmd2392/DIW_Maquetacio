@@ -130,25 +130,23 @@
                 <div class="img-galeria"><img src="img/alcazaba.jpg" alt="La alcazaba"></div>
             </div>
         </article>
+   
+<!-- Ejercicio 3 - Vídeo/Audio HTML | Práctica 12 
+Este archivo (index_ex3.html) muestra el vídeo con controles nativos visibles, en pausa y silenciado por defecto,
+como pide el enunciado. Se han eliminado los controles personalizados y el script JS de funciones asociado (del ejercicio 4),
+para que el control sea totalmente nativo. -->
 
     <!-- Sección Video -->
 <article id="video" class="article-generic video">
     <h2>Vídeo del restaurante (emplatado)</h2>
 
     <div class="container-video">
-        <video id="video-HD" muted playsinline>
+        <video controls muted playsinline>
             <source src="video/video-HD.mp4" type="video/mp4" />
             <source src="video/video-HD.webm" type="video/webm" />
             <!-- Formato alternativo para compatibilidad con navegadores que no soportan MP4 -->
             Tu navegador no soporta el vídeo.
         </video>
-        <!-- Controles personalizados superpuestos al vídeo (arriba a la derecha) -->
-        <div class="video-controls-overlay">
-            <span class="material-icons" onclick="playVideo()">play_circle</span>
-            <span class="material-icons" onclick="pauseVideo()">pause_circle</span>
-            <span class="material-icons" onclick="unmuteVideo()">volume_up</span>
-            <span class="material-icons" onclick="muteVideo()">volume_off</span>
-        </div>
     </div>
 </article>
 
@@ -211,27 +209,5 @@
      <form action="#reserva">
         <button class="fixed-bottom-rigth">Reservar</button>
     </form>
-
-<!-- Script en JS para controlar el vídeo mediante los iconos de google personalizados:
-reproducir, pausar, silenciar y activar sonido -->
-    <script>
-    const video = document.getElementById('video-HD');
-
-    function playVideo() {
-        video.play();
-    }
-
-    function pauseVideo() {
-        video.pause();
-    }
-
-    function muteVideo() {
-        video.muted = true;
-    }
-
-    function unmuteVideo() {
-        video.muted = false;
-    }
-</script>
 </body>
 </html>
