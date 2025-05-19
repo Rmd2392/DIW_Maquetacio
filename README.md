@@ -78,9 +78,15 @@ Todo el código está comentado, estructurado en ramas según la práctica, y pe
 
 ####  Ejercicio 2 – Animaciones
 
-- Animación `fadeUpColor` al cargar la página:
+- **Animación `fadeUpColor` al cargar la página**:
   - Aplica a la cabecera.
   - Cambios progresivos de color, opacidad y posición.
+  - Se activa automáticamente al cargar la página.
+
+- **Animación `animSobreNosotros`**:
+  - Aplica al título "Sobre nosotros" (h2).
+  - Cambios de color, opacidad y desplazamiento horizontal.
+  - Se activa automáticamente al cargar la página.
 
 ####  Ejercicio 3 – Vídeo con controles nativos
 
