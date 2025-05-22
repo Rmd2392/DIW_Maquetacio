@@ -233,5 +233,21 @@ reproducir, pausar, silenciar y activar sonido -->
         video.muted = false;
     }
 </script>
+
+<!-- Script en JS para ocultar/mostrar el botón "Reservar" según el scroll (Ejercicio 5) -->
+<script>
+window.onscroll = function () {
+    toggleButtonVisibility();
+};
+
+function toggleButtonVisibility() {
+    const boton = document.querySelector('.fixed-bottom-rigth');
+    if (document.documentElement.scrollTop > 375) {
+        boton.style.display = "none";
+    } else {
+        boton.style.display = "block";
+    }
+}
+</script>
 </body>
 </html>
