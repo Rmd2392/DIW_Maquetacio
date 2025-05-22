@@ -90,18 +90,28 @@ Todo el código está comentado, estructurado en ramas según la práctica, y pe
 
 ####  Ejercicio 3 – Vídeo con controles nativos
 
-- Se utiliza un archivo independiente: **`index_ex3.html`**.
-- El vídeo:
+  - Se utiliza un archivo independiente: **`index_ex3.html`**.
+  - El vídeo:
   - Está silenciado y en pausa por defecto.
   - Se muestran los **controles nativos del navegador**.
-- Esta separación es necesaria porque los requisitos de este ejercicio son **incompatibles** con los del siguiente (ejercicio 4).
+  - Esta separación es necesaria porque los requisitos de este ejercicio son **incompatibles** con los del siguiente (ejercicio 4).
 
 ####  Ejercicio 4 – Controles personalizados
 
-- Se ocultan los controles nativos.
-- Se implementan **iconos de Google Material** como controles:
+  - Se ocultan los controles nativos.
+  - Se implementan **iconos de Google Material** como controles:
   - Play, Pause, Mute, Unmute.
-- Se añade un script en JavaScript para controlar el comportamiento del vídeo.
+  - Se añade un script en JavaScript para controlar el comportamiento del vídeo.
+
+---
+
+####  Ejercicio 5 – Comportamiento dinámico con JavaScript
+
+  - Se ha implementado una funcionalidad que oculta el botón "Reservar" (fijo en la esquina inferior derecha) cuando el usuario hace scroll por debajo de los 375px, coincidiendo con el final de la cabecera.
+
+  - Cuando el usuario vuelve a subir, el botón vuelve a aparecer automáticamente.
+
+  - Este comportamiento mejora la experiencia visual y cumple con el requerimiento de añadir un comportamiento dinámico dependiente del scroll usando   JavaScript puro.
 
 ---
 
