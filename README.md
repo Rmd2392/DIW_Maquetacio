@@ -105,6 +105,16 @@ Todo el código está comentado, estructurado en ramas según la práctica, y pe
 
 ---
 
+####  Ejercicio 5 – Comportamiento dinámico con JavaScript
+
+  - Se ha implementado una funcionalidad que oculta el botón "Reservar" (fijo en la esquina inferior derecha) cuando el usuario hace scroll por debajo de los 375px, coincidiendo con el final de la cabecera.
+
+  - Cuando el usuario vuelve a subir, el botón vuelve a aparecer automáticamente.
+
+  - Este comportamiento mejora la experiencia visual y cumple con el requerimiento de añadir un comportamiento dinámico dependiente del scroll usando   JavaScript puro.
+
+---
+
 ##  Observaciones finales
 
 - Todo el código CSS está unificado en **`style.css`** y **organizado por secciones y ejercicios**.
